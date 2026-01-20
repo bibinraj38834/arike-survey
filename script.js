@@ -1,5 +1,12 @@
 const quizData = [
     {
+        question: "Before we begin, how do you identify?",
+        options: [
+            { text: "Male", types: [] },
+            { text: "Female", types: [] }
+        ]
+    },
+    {
         question: "How do you usually fall in love?",
         options: [
             { text: "Instantly, like a movie scene", types: ["hopeless_romantic", "passionate_lover"] },
@@ -95,56 +102,109 @@ const archetypes = {
     "hopeless_romantic": {
         title: "The Hopeless Romantic",
         icon: "💘",
-        desc: "Deeply emotional, you believe in soulmates and fairytale endings."
+        desc: "Lives for love, idealistic, emotionally driven, deeply affected by romance",
+        characters: [
+            { "name": "George", "movie": "Premam", "gender": "male" },
+            { "name": "Vinod", "movie": "Thattathin Marayathu", "gender": "male" },
+            { "name": "Pooja", "movie": "Ohm Shanthi Oshaana", "gender": "female" },
+            { "name": "Nadira", "movie": "Anarkali", "gender": "female" }
+        ]
     },
     "charming_flirt": {
         title: "The Charming Flirt",
         icon: "😏",
-        desc: "Confident, playful, and loves the thrill of the chase."
+        desc: "Confident, expressive, charismatic, romantic but playful",
+        characters: [
+            { "name": "Sunny", "movie": "Neelakasham Pachakadal Chuvanna Bhoomi", "gender": "male" },
+            { "name": "Unnikrishnan", "movie": "Vandanam", "gender": "male" },
+            { "name": "Darshana", "movie": "Hridayam", "gender": "female" },
+            { "name": "Parakkum Latha", "movie": "Chotta Mumbai", "gender": "female" }
+        ]
     },
     "slow_burn": {
         title: "The Slow-Burn Lover",
-        icon: "�️",
-        desc: "You take time to open up and value emotional safety above all."
+        icon: "🕯️",
+        desc: "Emotionally reserved, opens up slowly, values trust",
+        characters: [
+            { "name": "Mathan", "movie": "Mayaanadhi", "gender": "male" },
+            { "name": "Maya", "movie": "Salt N' Pepper", "gender": "female" }
+        ]
     },
     "independent_heart": {
         title: "The Independent Heart",
         icon: "🦅",
-        desc: "You love freedom and prioritize self-growth alongside relationships."
+        desc: "Values personal growth, freedom, purpose alongside love",
+        characters: [
+            { "name": "Arjun", "movie": "Bangalore Days", "gender": "male" },
+            { "name": "Sara", "movie": "Sara’s", "gender": "female" },
+            { "name": "Pallavi", "movie": "Uyare", "gender": "female" }
+        ]
     },
     "protective_partner": {
         title: "The Protective Partner",
         icon: "🛡️",
-        desc: "Loyal, dependable, and emotionally strong for those you love."
+        desc: "Strong sense of responsibility, protective (minus toxic traits)",
+        characters: [
+            { "name": "Shammi (Reformed Arc)", "movie": "Kumbalangi Nights", "gender": "male" },
+            { "name": "Georgekutty", "movie": "Drishyam", "gender": "male" },
+            { "name": "Kalyani", "movie": "Varane Avashyamund", "gender": "female" },
+            { "name": "Pournami", "movie": "Vijay Superum Pournamiyum", "gender": "female" }
+        ]
     },
     "passionate_lover": {
         title: "The Passionate Lover",
         icon: "🔥",
-        desc: "You experience intense emotions and crave dramatic romance."
+        desc: "Intense emotions, expressive love, impulsive decisions",
+        characters: [
+            { "name": "Luca", "movie": "Luca", "gender": "male" },
+            { "name": "Aparna", "movie": "Mayaanadhi", "gender": "female" },
+            { "name": "Kanchana", "movie": "Ennum Ente Moideen", "gender": "female" }
+        ]
     },
     "best_friend_lover": {
         title: "The Best-Friend Lover",
         icon: "🤝",
-        desc: "For you, friendship comes first, and deep love grows naturally."
+        desc: "Friendship-first romance, comfort and companionship",
+        characters: [
+            { "name": "Aby", "movie": "Niram", "gender": "male" },
+            { "name": "Sidharthan", "movie": "Oru Indian Pranayakatha", "gender": "male" },
+            { "name": "Gayathri", "movie": "Vikramadithyan", "gender": "female" },
+            { "name": "Jennifer", "movie": "Gramaphone", "gender": "female" }
+        ]
     },
     "realist_romantic": {
         title: "The Realist Romantic",
         icon: "🧠",
-        desc: "Practical and grounded, but you still believe in lasting love."
+        desc: "Grounded, practical, emotionally mature",
+        characters: [
+            { "name": "Dennis", "movie": "Summer in Bethlehem", "gender": "male" },
+            { "name": "Das", "movie": "Sandesham", "gender": "male" },
+            { "name": "Anjali", "movie": "Kali", "gender": "female" }
+        ]
     },
     "mysterious_soul": {
         title: "The Mysterious Soul",
         icon: "🌚",
-        desc: "Emotionally deep and enigmatic, you are hard to read but worth knowing."
+        desc: "Emotionally complex, guarded, layered personality",
+        characters: [
+            { "name": "Charlie", "movie": "Charlie", "gender": "male" },
+            { "name": "Nagavalli", "movie": "Manichitrathaazhu", "gender": "female" },
+            { "name": "Abhirami", "movie": "Summer in Bethlehem", "gender": "female" }
+        ]
     },
     "adventurous_lover": {
         title: "The Adventurous Lover",
         icon: "🌍",
-        desc: "You crave excitement, spontaneity, and shared new experiences."
+        desc: "Free-spirited, spontaneous, romantic through experiences",
+        characters: [
+            { "name": "Ashokan", "movie": "Yodha", "gender": "male" },
+            { "name": "Tessa", "movie": "Charlie", "gender": "female" }
+        ]
     }
 };
 
 let currentQuestionIndex = 0;
+let userGender = null;
 // Initialize scores dynamically
 let scores = {};
 function resetScores() {
@@ -177,16 +237,21 @@ function loadQuestion() {
         const btn = document.createElement("button");
         btn.classList.add("option-btn");
         btn.textContent = option.text;
-        btn.addEventListener("click", () => handleAnswer(option.types));
+        btn.addEventListener("click", () => handleAnswer(option));
         optionsGrid.appendChild(btn);
     });
 
     updateProgress();
 }
 
-function handleAnswer(types) {
+function handleAnswer(option) {
+    // Capture gender if it's the first question
+    if (currentQuestionIndex === 0) {
+        userGender = option.text.toLowerCase();
+    }
+
     // Increment score for each mapped archetype
-    types.forEach(type => {
+    option.types.forEach(type => {
         if (scores.hasOwnProperty(type)) {
             scores[type]++;
         }
@@ -231,19 +296,28 @@ function showResult() {
     }
 
     const result = archetypes[resultType];
-    resultTitle.textContent = result.title;
+
+    // Filter characters by gender
+    let filteredCharacters = result.characters.filter(c => c.gender === userGender);
+
+    // Fallback if no specific gender match
+    if (filteredCharacters.length === 0) {
+        filteredCharacters = result.characters;
+    }
+
+    // Pick a random character
+    const character = filteredCharacters[Math.floor(Math.random() * filteredCharacters.length)];
+
+    resultTitle.textContent = `${character.name} (${character.movie})`;
     resultIcon.textContent = result.icon;
-    resultDescription.textContent = result.desc;
+    resultDescription.textContent = `${result.title}\n\n${result.desc}`;
 
     resultModal.classList.remove("hidden");
     progressFill.style.width = "100%";
 }
 
 function restartQuiz() {
-    currentQuestionIndex = 0;
-    resetScores();
-    resultModal.classList.add("hidden");
-    loadQuestion();
+    window.location.reload();
 }
 
 // Event Listeners
