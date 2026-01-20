@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's Your Romantic Archetype?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <main class="quiz-container">
+        <header class="quiz-header">
+            <h1>Discover Your Romantic Soul</h1>
+            <p class="subtitle">Answer 10 questions to reveal your true dating character.</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </header>
+
+        <section id="quizContent" class="quiz-content">
+            <!-- Questions will be injected here by JS -->
+            <div class="question-card" id="questionCard">
+                <h2 id="questionText">Loading...</h2>
+                <div class="options-grid" id="optionsGrid">
+                    <!-- Options injected here -->
+                </div>
+            </div>
+        </section>
+
+        <footer class="quiz-footer">
+            <span id="questionCounter">Question 1 of 10</span>
+        </footer>
+    </main>
+
+    <!-- Result Modal -->
+    <div id="resultModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-btn" id="closeModal">&times;</span>
+                <h3>Your Romantic Archetype Is...</h3>
+            </div>
+            <div class="modal-body">
+                <h2 id="resultTitle" class="result-title">The Romantic Poet</h2>
+                <div class="result-icon" id="resultIcon">🌹</div>
+                <p id="resultDescription" class="result-description">
+                    You are deep, emotional, and value connection above all else.
+                </p>
+                <button id="restartBtn" class="primary-btn">Retake Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
