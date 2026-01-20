@@ -259,11 +259,14 @@ function handleAnswer(option) {
 
     currentQuestionIndex++;
 
-    if (currentQuestionIndex < quizData.length) {
-        loadQuestion();
-    } else {
-        showResult();
-    }
+    // Add a small delay for better UX and to clear hover states
+    setTimeout(() => {
+        if (currentQuestionIndex < quizData.length) {
+            loadQuestion();
+        } else {
+            showResult();
+        }
+    }, 300);
 }
 
 function updateProgress() {

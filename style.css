@@ -125,11 +125,13 @@ h1 {
     color: var(--text-main);
 }
 
-.option-btn:hover {
-    border-color: var(--primary-color);
-    background: #fff0f3;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(233, 78, 119, 0.15);
+@media (hover: hover) {
+    .option-btn:hover {
+        border-color: var(--primary-color);
+        background: #fff0f3;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(233, 78, 119, 0.15);
+    }
 }
 
 .option-btn:active {
@@ -297,6 +299,7 @@ h1 {
 .store-btn:hover {
     transform: scale(1.05);
 }
+
 /* Modal Actions */
 .modal-actions {
     display: flex;
