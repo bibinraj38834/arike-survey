@@ -297,3 +297,29 @@ h1 {
 .store-btn:hover {
     transform: scale(1.05);
 }
+/* Modal Actions */
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--text-main);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 700;
+    font-family: var(--font-body);
+}
+
+.secondary-btn:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+}

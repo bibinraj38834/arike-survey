@@ -1,126 +1,159 @@
 const quizData = [
     {
-        question: "What is your idea of a perfect date?",
+        question: "How do you usually fall in love?",
         options: [
-            { text: "A candlelit dinner with poetry reading", type: "Poet" },
-            { text: "An exclusive gala or VIP event", type: "Power" },
-            { text: "A spontaneous road trip to nowhere", type: "Free" },
-            { text: "A cozy movie night at home", type: "Protector" }
+            { text: "Instantly, like a movie scene", types: ["hopeless_romantic", "passionate_lover"] },
+            { text: "Slowly, over time", types: ["slow_burn", "realist_romantic"] },
+            { text: "Through friendship", types: ["best_friend_lover"] },
+            { text: "I don’t fall easily", types: ["independent_heart", "mysterious_soul"] }
         ]
     },
     {
-        question: "What is your primary Love Language?",
+        question: "Your ideal date looks like?",
         options: [
-            { text: "Words of Affirmation", type: "Poet" },
-            { text: "Receiving Gifts", type: "Power" },
-            { text: "Quality Time & Adventures", type: "Free" },
-            { text: "Acts of Service", type: "Protector" }
+            { text: "Candlelight dinner and deep talks", types: ["hopeless_romantic"] },
+            { text: "Road trip with no plan", types: ["adventurous_lover"] },
+            { text: "Casual coffee and laughs", types: ["best_friend_lover"] },
+            { text: "Something intense and unforgettable", types: ["passionate_lover", "charming_flirt"] }
         ]
     },
     {
-        question: "How do you handle conflict?",
+        question: "What scares you most in relationships?",
         options: [
-            { text: "I write a long, emotional letter", type: "Poet" },
-            { text: "I prefer a logical, structured debate", type: "Power" },
-            { text: "I try to distract us with something fun", type: "Free" },
-            { text: "I fix the practical problem immediately", type: "Protector" }
+            { text: "Not being loved enough", types: ["hopeless_romantic"] },
+            { text: "Losing freedom", types: ["independent_heart"] },
+            { text: "Getting hurt", types: ["slow_burn", "protective_partner"] },
+            { text: "Boredom", types: ["adventurous_lover", "charming_flirt"] }
         ]
     },
     {
-        question: "Pick a gift to receive:",
+        question: "How do you express love?",
         options: [
-            { text: "A handwritten love letter", type: "Poet" },
-            { text: "A luxury designer watch", type: "Power" },
-            { text: "Plane tickets for a weekend getaway", type: "Free" },
-            { text: "A high-quality coffee maker", type: "Protector" }
+            { text: "Words and gestures", types: ["hopeless_romantic"] },
+            { text: "Actions, not words", types: ["realist_romantic"] },
+            { text: "Being there always", types: ["protective_partner"] },
+            { text: "Physical affection", types: ["passionate_lover"] }
         ]
     },
     {
-        question: "What's your ideal weekend activity?",
+        question: "After a breakup, you…",
         options: [
-            { text: "Visiting an art gallery", type: "Poet" },
-            { text: "Networking at a high-end club", type: "Power" },
-            { text: "Skydiving or hiking a new trail", type: "Free" },
-            { text: "Gardening or a DIY project", type: "Protector" }
+            { text: "Replay memories", types: ["hopeless_romantic", "mysterious_soul"] },
+            { text: "Move on quickly", types: ["charming_flirt"] },
+            { text: "Reflect and heal", types: ["slow_burn", "realist_romantic"] },
+            { text: "Distract yourself", types: ["adventurous_lover"] }
         ]
     },
     {
-        question: "Which quality attracts you most?",
+        question: "Your love language?",
         options: [
-            { text: "Emotional sensitivity and depth", type: "Poet" },
-            { text: "Ambition and drive for success", type: "Power" },
-            { text: "Spontaneity and zest for life", type: "Free" },
-            { text: "Reliability and stability", type: "Protector" }
+            { text: "Quality time", types: ["best_friend_lover"] },
+            { text: "Physical touch", types: ["passionate_lover"] },
+            { text: "Acts of service", types: ["protective_partner"] },
+            { text: "Words of affirmation", types: ["hopeless_romantic"] }
         ]
     },
     {
-        question: "Choose a dream vacation spot:",
+        question: "In a relationship, you value…",
         options: [
-            { text: "Paris, France - for the romance", type: "Poet" },
-            { text: "Dubai, UAE - for the luxury", type: "Power" },
-            { text: "Backpacking through Southeast Asia", type: "Free" },
-            { text: "A secluded cabin in the woods", type: "Protector" }
+            { text: "Emotional depth", types: ["mysterious_soul"] },
+            { text: "Stability", types: ["realist_romantic", "protective_partner"] },
+            { text: "Fun & excitement", types: ["adventurous_lover"] },
+            { text: "Independence", types: ["independent_heart"] }
         ]
     },
     {
-        question: "How do you prefer to communicate?",
+        question: "Your friends describe you as…",
         options: [
-            { text: "Long, expressive text messages", type: "Poet" },
-            { text: "Short, efficient, to the point", type: "Power" },
-            { text: "Face-to-face, reading the vibe", type: "Free" },
-            { text: "Routine daily check-ins", type: "Protector" }
+            { text: "Dreamy", types: ["hopeless_romantic"] },
+            { text: "Reliable", types: ["protective_partner"] },
+            { text: "Magnetic", types: ["charming_flirt"] },
+            { text: "Hard to read", types: ["mysterious_soul"] }
         ]
     },
     {
-        question: "Favorite Movie Genre?",
+        question: "What makes you fall for someone?",
         options: [
-            { text: "Titanic / Generally Dramatic Romance", type: "Poet" },
-            { text: "Wolf of Wall Street / Thriller", type: "Power" },
-            { text: "Indiana Jones / Action Adventure", type: "Free" },
-            { text: "Toy Story / Family Comedy", type: "Protector" }
+            { text: "Emotional connection", types: ["slow_burn"] },
+            { text: "Shared experiences", types: ["best_friend_lover"] },
+            { text: "Chemistry", types: ["passionate_lover", "charming_flirt"] },
+            { text: "Trust", types: ["realist_romantic", "protective_partner"] }
         ]
     },
     {
-        question: "What is your ultimate relationship goal?",
+        question: "Love, to you, is…",
         options: [
-            { text: "A soul-deep spiritual connection", type: "Poet" },
-            { text: "Being a power couple that dominates", type: "Power" },
-            { text: "Partners in crime, exploring the world", type: "Free" },
-            { text: "Building a safe, happy family home", type: "Protector" }
+            { text: "Destiny", types: ["hopeless_romantic"] },
+            { text: "A journey", types: ["slow_burn"] },
+            { text: "A choice", types: ["realist_romantic"] },
+            { text: "An adventure", types: ["adventurous_lover"] }
         ]
     }
 ];
 
 const archetypes = {
-    "Poet": {
-        title: "The Romantic Poet",
-        icon: "🌹",
-        desc: "You are a dreamer who believes in fairy tales. You feel deeply and love passionately. Your ideal partner is someone who can match your emotional depth and isn't afraid of vulnerability."
+    "hopeless_romantic": {
+        title: "The Hopeless Romantic",
+        icon: "💘",
+        desc: "Deeply emotional, you believe in soulmates and fairytale endings."
     },
-    "Power": {
-        title: "The Ambitious Power Player",
-        icon: "👑",
-        desc: "You are driven, confident, and know what you want. You value success and excellence. Your ideal partner is someone who is equally ambitious and can stand by your side as you conquer the world."
+    "charming_flirt": {
+        title: "The Charming Flirt",
+        icon: "😏",
+        desc: "Confident, playful, and loves the thrill of the chase."
     },
-    "Free": {
-        title: "The Adventurous Free Spirit",
-        icon: "✈️",
-        desc: "You are wild at heart and refuse to be tied down by convention. You value experiences over possessions. Your ideal partner is someone who is ready to pack a bag and go on an adventure at a moment's notice."
+    "slow_burn": {
+        title: "The Slow-Burn Lover",
+        icon: "�️",
+        desc: "You take time to open up and value emotional safety above all."
     },
-    "Protector": {
-        title: "The Steadfast Protector",
+    "independent_heart": {
+        title: "The Independent Heart",
+        icon: "🦅",
+        desc: "You love freedom and prioritize self-growth alongside relationships."
+    },
+    "protective_partner": {
+        title: "The Protective Partner",
         icon: "🛡️",
-        desc: "You are the rock in the storm. You value loyalty, stability, and practical acts of love. Your ideal partner is someone who appreciates your dedication and wants to build a secure, lasting future with you."
+        desc: "Loyal, dependable, and emotionally strong for those you love."
+    },
+    "passionate_lover": {
+        title: "The Passionate Lover",
+        icon: "🔥",
+        desc: "You experience intense emotions and crave dramatic romance."
+    },
+    "best_friend_lover": {
+        title: "The Best-Friend Lover",
+        icon: "🤝",
+        desc: "For you, friendship comes first, and deep love grows naturally."
+    },
+    "realist_romantic": {
+        title: "The Realist Romantic",
+        icon: "🧠",
+        desc: "Practical and grounded, but you still believe in lasting love."
+    },
+    "mysterious_soul": {
+        title: "The Mysterious Soul",
+        icon: "🌚",
+        desc: "Emotionally deep and enigmatic, you are hard to read but worth knowing."
+    },
+    "adventurous_lover": {
+        title: "The Adventurous Lover",
+        icon: "🌍",
+        desc: "You crave excitement, spontaneity, and shared new experiences."
     }
 };
 
 let currentQuestionIndex = 0;
-let scores = {
-    "Poet": 0,
-    "Power": 0,
-    "Free": 0,
-    "Protector": 0
-};
+// Initialize scores dynamically
+let scores = {};
+function resetScores() {
+    scores = {};
+    for (const key in archetypes) {
+        scores[key] = 0;
+    }
+}
+resetScores();
 
 // DOM Elements
 const questionText = document.getElementById("questionText");
@@ -132,6 +165,7 @@ const resultTitle = document.getElementById("resultTitle");
 const resultIcon = document.getElementById("resultIcon");
 const resultDescription = document.getElementById("resultDescription");
 const restartBtn = document.getElementById("restartBtn");
+const shareBtn = document.getElementById("shareBtn");
 const closeModal = document.getElementById("closeModal");
 
 function loadQuestion() {
@@ -143,15 +177,21 @@ function loadQuestion() {
         const btn = document.createElement("button");
         btn.classList.add("option-btn");
         btn.textContent = option.text;
-        btn.addEventListener("click", () => handleAnswer(option.type));
+        btn.addEventListener("click", () => handleAnswer(option.types));
         optionsGrid.appendChild(btn);
     });
 
     updateProgress();
 }
 
-function handleAnswer(type) {
-    scores[type]++;
+function handleAnswer(types) {
+    // Increment score for each mapped archetype
+    types.forEach(type => {
+        if (scores.hasOwnProperty(type)) {
+            scores[type]++;
+        }
+    });
+
     currentQuestionIndex++;
 
     if (currentQuestionIndex < quizData.length) {
@@ -170,13 +210,24 @@ function updateProgress() {
 function showResult() {
     // Find highest score
     let maxScore = 0;
-    let resultType = "Poet"; // Default
+    let resultType = "hopeless_romantic"; // Default fallback
+
+    // Get all types with the max score to handle ties randomly or deterministically
+    let candidates = [];
 
     for (const [type, score] of Object.entries(scores)) {
         if (score > maxScore) {
             maxScore = score;
-            resultType = type;
+            candidates = [type];
+        } else if (score === maxScore) {
+            candidates.push(type);
         }
+    }
+
+    // If there's a tie, you could pick random, or just the first one. 
+    // Let's pick random for fun if there's a tie
+    if (candidates.length > 0) {
+        resultType = candidates[Math.floor(Math.random() * candidates.length)];
     }
 
     const result = archetypes[resultType];
@@ -190,7 +241,7 @@ function showResult() {
 
 function restartQuiz() {
     currentQuestionIndex = 0;
-    scores = { "Poet": 0, "Power": 0, "Free": 0, "Protector": 0 };
+    resetScores();
     resultModal.classList.add("hidden");
     loadQuestion();
 }
@@ -198,11 +249,38 @@ function restartQuiz() {
 // Event Listeners
 restartBtn.addEventListener("click", restartQuiz);
 closeModal.addEventListener("click", () => {
-    // Ideally we might want to just restart or close. For now, let's just close the modal visually but maybe restart if they want to play again
-    // But since the quiz is done, closing it leaves them at a blank end state. Let's make "X" also restart or just stay on the last view.
-    // Let's just hide it, but maybe we should disable X if we want them to explicitly restart. 
-    // Actually, let's make X just hide it, users can click a "Restart" button which is inside the modal.
     resultModal.classList.add("hidden");
+});
+
+shareBtn.addEventListener("click", async () => {
+    const title = resultTitle.textContent;
+    const description = resultDescription.textContent;
+    const shareText = `I got "${title}"! 💘\n${description}\n\nFind your romantic archetype here:`;
+    const url = window.location.href;
+
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: "My Romantic Archetype",
+                text: shareText,
+                url: url
+            });
+        } catch (err) {
+            console.log("Error sharing:", err);
+        }
+    } else {
+        // Fallback
+        navigator.clipboard.writeText(`${shareText} ${url}`);
+        const originalText = shareBtn.textContent;
+        shareBtn.textContent = "Copied! ✅";
+        setTimeout(() => {
+            shareBtn.textContent = originalText;
+        }, 2000);
+
+        // Optional: Open Twitter intent
+        const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(url)}`;
+        window.open(twitterUrl, '_blank');
+    }
 });
 
 // Initialize
