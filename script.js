@@ -322,7 +322,7 @@ function showResult() {
         resultImage.classList.add("hidden");
     }
 
-    resultDescription.textContent = `${result.title}\n\n${result.desc}`;
+    resultDescription.textContent = `${result.title}:\n\n${result.desc}`;
 
     resultModal.classList.remove("hidden");
     progressFill.style.width = "100%";
@@ -378,3 +378,18 @@ window.addEventListener("click", (event) => {
 
 // Initialize
 loadQuestion();
+preloadImages();
+
+function preloadImages() {
+    for (const key in archetypes) {
+        if (archetypes.hasOwnProperty(key)) {
+            const characters = archetypes[key].characters;
+            characters.forEach(character => {
+                if (character.imageSrc) {
+                    const img = new Image();
+                    img.src = character.imageSrc;
+                }
+            });
+        }
+    }
+}
