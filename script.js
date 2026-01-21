@@ -104,10 +104,10 @@ const archetypes = {
         icon: "💘",
         desc: "Lives for love, idealistic, emotionally driven, deeply affected by romance",
         characters: [
-            { "name": "George", "movie": "Premam", "gender": "male" },
-            { "name": "Vinod", "movie": "Thattathin Marayathu", "gender": "male" },
-            { "name": "Pooja", "movie": "Ohm Shanthi Oshaana", "gender": "female" },
-            { "name": "Nadira", "movie": "Anarkali", "gender": "female" }
+            { "name": "George", "movie": "Premam", "gender": "male", "imageSrc": "assets/george-premam.png" },
+            { "name": "Vinod", "movie": "Thattathin Marayathu", "gender": "male", "imageSrc": "assets/vinod-thattathin-marayathu.png" },
+            { "name": "Pooja", "movie": "Ohm Shanthi Oshaana", "gender": "female", "imageSrc": "assets/pooja-ohm-shanthi-oshaana.png" },
+            { "name": "Nadira", "movie": "Anarkali", "gender": "female", "imageSrc": "assets/nadira-anarkali.png" }
         ]
     },
     "charming_flirt": {
@@ -115,10 +115,10 @@ const archetypes = {
         icon: "😏",
         desc: "Confident, expressive, charismatic, romantic but playful",
         characters: [
-            { "name": "Sunny", "movie": "Neelakasham Pachakadal Chuvanna Bhoomi", "gender": "male" },
-            { "name": "Unnikrishnan", "movie": "Vandanam", "gender": "male" },
-            { "name": "Darshana", "movie": "Hridayam", "gender": "female" },
-            { "name": "Parakkum Latha", "movie": "Chotta Mumbai", "gender": "female" }
+            { "name": "Sunny", "movie": "Neelakasham Pachakadal Chuvanna Bhoomi", "gender": "male", "imageSrc": "assets/sunny-neelakasham-pachakadal-chuvanna-bhoomi.png" },
+            { "name": "Unnikrishnan", "movie": "Vandanam", "gender": "male", "imageSrc": "assets/unnikrishnan-vandanam.png" },
+            { "name": "Darshana", "movie": "Hridayam", "gender": "female", "imageSrc": "assets/darshana-hridayam.png" },
+            { "name": "Parakkum Latha", "movie": "Chotta Mumbai", "gender": "female", "imageSrc": "assets/parakkum-latha-chotta-mumbai.png" }
         ]
     },
     "slow_burn": {
@@ -126,8 +126,8 @@ const archetypes = {
         icon: "🕯️",
         desc: "Emotionally reserved, opens up slowly, values trust",
         characters: [
-            { "name": "Mathan", "movie": "Mayaanadhi", "gender": "male" },
-            { "name": "Maya", "movie": "Salt N' Pepper", "gender": "female" }
+            { "name": "Mathan", "movie": "Mayaanadhi", "gender": "male", "imageSrc": "assets/mathan-mayaanadhi.png" },
+            { "name": "Maya", "movie": "Salt N' Pepper", "gender": "female", "imageSrc": "assets/maya-salt-n-pepper.png" }
         ]
     },
     "independent_heart": {
@@ -135,9 +135,9 @@ const archetypes = {
         icon: "🦅",
         desc: "Values personal growth, freedom, purpose alongside love",
         characters: [
-            { "name": "Arjun", "movie": "Bangalore Days", "gender": "male" },
-            { "name": "Sara", "movie": "Sara’s", "gender": "female" },
-            { "name": "Pallavi", "movie": "Uyare", "gender": "female" }
+            { "name": "Arjun", "movie": "Bangalore Days", "gender": "male", "imageSrc": "assets/arjun-bangalore-days.png" },
+            { "name": "Sara", "movie": "Sara’s", "gender": "female", "imageSrc": "assets/sara-saras.png" },
+            { "name": "Pallavi", "movie": "Uyare", "gender": "female", "imageSrc": "assets/pallavi-uyare.png" }
         ]
     },
     "protective_partner": {
@@ -145,10 +145,10 @@ const archetypes = {
         icon: "🛡️",
         desc: "Strong sense of responsibility, protective (minus toxic traits)",
         characters: [
-            { "name": "Shammi (Reformed Arc)", "movie": "Kumbalangi Nights", "gender": "male" },
-            { "name": "Georgekutty", "movie": "Drishyam", "gender": "male" },
-            { "name": "Kalyani", "movie": "Varane Avashyamund", "gender": "female" },
-            { "name": "Pournami", "movie": "Vijay Superum Pournamiyum", "gender": "female" }
+            { "name": "Shammi", "movie": "Kumbalangi Nights", "gender": "male", "imageSrc": "assets/shammi-kumbalangi-nights.png" },
+            { "name": "Georgekutty", "movie": "Drishyam", "gender": "male", "imageSrc": "assets/georgekutty-drishyam.png" },
+            { "name": "Kalyani", "movie": "Varane Avashyamund", "gender": "female", "imageSrc": "assets/kalyani-varane-avashyamund.png" },
+            { "name": "Pournami", "movie": "Vijay Superum Pournamiyum", "gender": "female", "imageSrc": "assets/pournami-vijay-superum-pournamiyum.png" }
         ]
     },
     "passionate_lover": {
@@ -156,9 +156,9 @@ const archetypes = {
         icon: "🔥",
         desc: "Intense emotions, expressive love, impulsive decisions",
         characters: [
-            { "name": "Luca", "movie": "Luca", "gender": "male" },
-            { "name": "Aparna", "movie": "Mayaanadhi", "gender": "female" },
-            { "name": "Kanchana", "movie": "Ennum Ente Moideen", "gender": "female" }
+            { "name": "Luca", "movie": "Luca", "gender": "male", "imageSrc": "assets/luca-luca.png" },
+            { "name": "Aparna", "movie": "Mayaanadhi", "gender": "female", "imageSrc": "assets/aparna-mayaanadhi.png" },
+            { "name": "Kanchana", "movie": "Ennum Ente Moideen", "gender": "female", "imageSrc": "assets/kanchana-ennum-ente-moideen.png" }
         ]
     },
     "best_friend_lover": {
@@ -166,10 +166,10 @@ const archetypes = {
         icon: "🤝",
         desc: "Friendship-first romance, comfort and companionship",
         characters: [
-            { "name": "Aby", "movie": "Niram", "gender": "male" },
-            { "name": "Sidharthan", "movie": "Oru Indian Pranayakatha", "gender": "male" },
-            { "name": "Gayathri", "movie": "Vikramadithyan", "gender": "female" },
-            { "name": "Jennifer", "movie": "Gramaphone", "gender": "female" }
+            { "name": "Aby", "movie": "Niram", "gender": "male", "imageSrc": "assets/aby-niram.png" },
+            { "name": "Sidharthan", "movie": "Oru Indian Pranayakatha", "gender": "male", "imageSrc": "assets/sidharthan-oru-indian-pranayakatha.png" },
+            { "name": "Gayathri", "movie": "Vikramadithyan", "gender": "female", "imageSrc": "assets/gayathri-vikramadithyan.png" },
+            { "name": "Jennifer", "movie": "Gramaphone", "gender": "female", "imageSrc": "assets/jennifer-gramaphone.png" }
         ]
     },
     "realist_romantic": {
@@ -177,9 +177,9 @@ const archetypes = {
         icon: "🧠",
         desc: "Grounded, practical, emotionally mature",
         characters: [
-            { "name": "Dennis", "movie": "Summer in Bethlehem", "gender": "male" },
-            { "name": "Das", "movie": "Sandesham", "gender": "male" },
-            { "name": "Anjali", "movie": "Kali", "gender": "female" }
+            { "name": "Dennis", "movie": "Summer in Bethlehem", "gender": "male", "imageSrc": "assets/dennis-summer-in-bethlehem.png" },
+            { "name": "Das", "movie": "Sandesham", "gender": "male", "imageSrc": "assets/das-sandesham.png" },
+            { "name": "Anjali", "movie": "Kali", "gender": "female", "imageSrc": "assets/anjali-kali.png" }
         ]
     },
     "mysterious_soul": {
@@ -187,9 +187,9 @@ const archetypes = {
         icon: "🌚",
         desc: "Emotionally complex, guarded, layered personality",
         characters: [
-            { "name": "Charlie", "movie": "Charlie", "gender": "male" },
-            { "name": "Nagavalli", "movie": "Manichitrathaazhu", "gender": "female" },
-            { "name": "Abhirami", "movie": "Summer in Bethlehem", "gender": "female" }
+            { "name": "Charlie", "movie": "Charlie", "gender": "male", "imageSrc": "assets/charlie-charlie.png" },
+            { "name": "Nagavalli", "movie": "Manichitrathaazhu", "gender": "female", "imageSrc": "assets/nagavalli-manichitrathaazhu.png" },
+            { "name": "Abhirami", "movie": "Summer in Bethlehem", "gender": "female", "imageSrc": "assets/abhirami-summer-in-bethlehem.png" }
         ]
     },
     "adventurous_lover": {
@@ -197,8 +197,8 @@ const archetypes = {
         icon: "🌍",
         desc: "Free-spirited, spontaneous, romantic through experiences",
         characters: [
-            { "name": "Ashokan", "movie": "Yodha", "gender": "male" },
-            { "name": "Tessa", "movie": "Charlie", "gender": "female" }
+            { "name": "Ashokan", "movie": "Yodha", "gender": "male", "imageSrc": "assets/chandralekha-yodha.png" },
+            { "name": "Tessa", "movie": "Charlie", "gender": "female", "imageSrc": "assets/tessa-charlie.png" }
         ]
     }
 };
@@ -221,8 +221,8 @@ const optionsGrid = document.getElementById("optionsGrid");
 const progressFill = document.getElementById("progressFill");
 const questionCounter = document.getElementById("questionCounter");
 const resultModal = document.getElementById("resultModal");
-const resultTitle = document.getElementById("resultTitle");
 const resultIcon = document.getElementById("resultIcon");
+const resultImage = document.getElementById("resultImage");
 const resultDescription = document.getElementById("resultDescription");
 const restartBtn = document.getElementById("restartBtn");
 const shareBtn = document.getElementById("shareBtn");
@@ -311,8 +311,17 @@ function showResult() {
     // Pick a random character
     const character = filteredCharacters[Math.floor(Math.random() * filteredCharacters.length)];
 
-    resultTitle.textContent = `${character.name} (${character.movie})`;
-    resultIcon.textContent = result.icon;
+    // Show Image if available
+    if (character.imageSrc) {
+        resultImage.src = character.imageSrc;
+        resultImage.classList.remove("hidden");
+        document.getElementById("emojiContainer").classList.add("hidden");
+    } else {
+        resultIcon.textContent = result.icon;
+        document.getElementById("emojiContainer").classList.remove("hidden");
+        resultImage.classList.add("hidden");
+    }
+
     resultDescription.textContent = `${result.title}\n\n${result.desc}`;
 
     resultModal.classList.remove("hidden");
@@ -330,9 +339,10 @@ closeModal.addEventListener("click", () => {
 });
 
 shareBtn.addEventListener("click", async () => {
-    const title = resultTitle.textContent;
     const description = resultDescription.textContent;
-    const shareText = `I got "${title}"! 💘\n${description}\n\nFind your romantic archetype here:`;
+    // Extract title (first line) from description
+    const title = description.split('\n')[0];
+    const shareText = `I got "${title}"! 💘\nFind your romantic archetype here:`;
     const url = window.location.href;
 
     if (navigator.share) {
