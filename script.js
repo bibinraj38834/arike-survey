@@ -225,8 +225,8 @@ const resultIcon = document.getElementById("resultIcon");
 const resultImage = document.getElementById("resultImage");
 const resultDescription = document.getElementById("resultDescription");
 const restartBtn = document.getElementById("restartBtn");
-const shareBtn = document.getElementById("shareBtn");
-const closeModal = document.getElementById("closeModal");
+// const shareBtn = document.getElementById("shareBtn"); // Removed
+const topShareBtn = document.getElementById("topShareBtn");
 
 function loadQuestion() {
     const currentQuestion = quizData[currentQuestionIndex];
@@ -333,12 +333,10 @@ function restartQuiz() {
 }
 
 // Event Listeners
+// Event Listeners
 restartBtn.addEventListener("click", restartQuiz);
-closeModal.addEventListener("click", () => {
-    resultModal.classList.add("hidden");
-});
 
-shareBtn.addEventListener("click", async () => {
+topShareBtn.addEventListener("click", async () => {
     const description = resultDescription.textContent;
     // Extract title (first line) from description
     const title = description.split('\n')[0];
@@ -358,15 +356,23 @@ shareBtn.addEventListener("click", async () => {
     } else {
         // Fallback
         navigator.clipboard.writeText(`${shareText} ${url}`);
-        const originalText = shareBtn.textContent;
-        shareBtn.textContent = "Copied! ✅";
+
+        // Visual feedback on the button
+        const originalContent = topShareBtn.innerHTML;
+        topShareBtn.innerHTML = "✅"; // Simple checkmark feedback
         setTimeout(() => {
-            shareBtn.textContent = originalText;
+            topShareBtn.innerHTML = originalContent;
         }, 2000);
 
         // Optional: Open Twitter intent
         const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(url)}`;
         window.open(twitterUrl, '_blank');
+    }
+});
+
+window.addEventListener("click", (event) => {
+    if (event.target === resultModal) {
+        restartQuiz();
     }
 });
 
