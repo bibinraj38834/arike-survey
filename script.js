@@ -248,6 +248,8 @@ function handleAnswer(option) {
     // Capture gender if it's the first question
     if (currentQuestionIndex === 0) {
         userGender = option.text.toLowerCase();
+        // Track Quiz Start
+        trackEvent('quiz_start', { gender: userGender });
     }
 
     // Increment score for each mapped archetype
@@ -326,6 +328,12 @@ function showResult() {
 
     resultModal.classList.remove("hidden");
     progressFill.style.width = "100%";
+
+    // Track Quiz Completion
+    trackEvent('quiz_complete', {
+        result_archetype: resultType,
+        result_title: result.title
+    });
 }
 
 function restartQuiz() {
@@ -342,6 +350,9 @@ topShareBtn.addEventListener("click", async () => {
     const title = description.split('\n')[0];
     const shareText = `I got "${title}"! 💘\nFind your romantic archetype here:`;
     const url = window.location.href;
+
+    // Track Share Click
+    trackEvent('share_result', { method: navigator.share ? 'native_share' : 'clipboard_copy' });
 
     if (navigator.share) {
         try {
@@ -379,6 +390,23 @@ window.addEventListener("click", (event) => {
 // Initialize
 loadQuestion();
 preloadImages();
+
+// Analytics Helper
+function trackEvent(eventName, params = {}) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', eventName, params);
+    } else {
+        console.log('Analytics Event:', eventName, params);
+    }
+}
+
+// Track Store Clicks
+document.querySelectorAll('.store-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        const store = btn.classList.contains('google-play') ? 'google_play' : 'app_store';
+        trackEvent('download_click', { store: store });
+    });
+});
 
 function preloadImages() {
     for (const key in archetypes) {
