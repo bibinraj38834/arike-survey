@@ -123,6 +123,10 @@ const archetypes = {
         title: "The Hopeless Romantic",
         icon: "💘",
         desc: "Lives for love, idealistic, emotionally driven, deeply affected by romance",
+        hook: "You are the kind of person who believes love should feel like magic.",
+        mirror: "You tend to value deep connection over logic, feel emotions intensely, and hold onto memories long after they've faded.",
+        truth: "Sometimes, you fall in love with the potential of a person, rather than who they actually are.",
+        intro: "That’s why your love style aligns with...",
         characters: [
             { "name": "George", "movie": "Premam", "gender": "male", "imageSrc": "assets/george-premam.png" },
             { "name": "Vinod", "movie": "Thattathin Marayathu", "gender": "male", "imageSrc": "assets/vinod-thattathin-marayathu.png" },
@@ -134,6 +138,10 @@ const archetypes = {
         title: "The Charming Flirt",
         icon: "😏",
         desc: "Confident, expressive, charismatic, romantic but playful",
+        hook: "You are the kind of person who knows how to light up a room.",
+        mirror: "You tend to use humor to connect, make people feel special instantly, and enjoy the thrill of the chase.",
+        truth: "Sometimes, you keep things light because you're afraid that 'real' intimacy might be boring—or terrifying.",
+        intro: "That’s why your love style aligns with...",
         characters: [
             { "name": "Sunny", "movie": "Neelakasham Pachakadal Chuvanna Bhoomi", "gender": "male", "imageSrc": "assets/sunny-neelakasham-pachakadal-chuvanna-bhoomi.png" },
             { "name": "Unnikrishnan", "movie": "Vandanam", "gender": "male", "imageSrc": "assets/unnikrishnan-vandanam.png" },
@@ -145,6 +153,10 @@ const archetypes = {
         title: "The Slow-Burn Lover",
         icon: "🕯️",
         desc: "Emotionally reserved, opens up slowly, values trust",
+        hook: "You are the kind of person who needs to feel safe before you feel in love.",
+        mirror: "You tend to observe before you commit, value consistency over grand gestures, and protect your heart carefully.",
+        truth: "Sometimes, you wait so long for the 'perfect' moment to open up that you miss the connection right in front of you.",
+        intro: "That’s why your love style aligns with...",
         characters: [
             { "name": "Mathan", "movie": "Mayaanadhi", "gender": "male", "imageSrc": "assets/mathan-mayaanadhi.png" },
             { "name": "Maya", "movie": "Salt N' Pepper", "gender": "female", "imageSrc": "assets/maya-salt-n-pepper.png" }
@@ -154,6 +166,10 @@ const archetypes = {
         title: "The Independent Heart",
         icon: "🦅",
         desc: "Values personal growth, freedom, purpose alongside love",
+        hook: "You are the kind of person who refuses to lose yourself in someone else.",
+        mirror: "You tend to prioritize your goals, need your own space to recharge, and want a partner, not a savior.",
+        truth: "Sometimes, your need for independence can make your partner feel like they aren't needed at all.",
+        intro: "That’s why your love style aligns with...",
         characters: [
             { "name": "Arjun", "movie": "Bangalore Days", "gender": "male", "imageSrc": "assets/arjun-bangalore-days.png" },
             { "name": "Sara", "movie": "Sara’s", "gender": "female", "imageSrc": "assets/sara-saras.png" },
@@ -164,6 +180,10 @@ const archetypes = {
         title: "The Protective Partner",
         icon: "🛡️",
         desc: "Strong sense of responsibility, protective (minus toxic traits)",
+        hook: "You are the kind of person who shows love by taking care of things.",
+        mirror: "You tend to step in when things get messy, feel responsible for others' happiness, and value loyalty above all.",
+        truth: "Sometimes, you protect so much that you forget to let people make their own mistakes.",
+        intro: "That’s why your love style aligns with...",
         characters: [
             { "name": "Shammi", "movie": "Kumbalangi Nights", "gender": "male", "imageSrc": "assets/shammi-kumbalangi-nights.png" },
             { "name": "Georgekutty", "movie": "Drishyam", "gender": "male", "imageSrc": "assets/georgekutty-drishyam.png" },
@@ -175,6 +195,10 @@ const archetypes = {
         title: "The Passionate Lover",
         icon: "🔥",
         desc: "Intense emotions, expressive love, impulsive decisions",
+        hook: "You are the kind of person who loves with your whole being, no brakes.",
+        mirror: "You tend to follow your heart recklessly, feel highs and lows intensely, and crave all-consuming connection.",
+        truth: "Sometimes, you burn so bright that you burn out—or burn the people around you.",
+        intro: "That’s why your love style aligns with...",
         characters: [
             { "name": "Luca", "movie": "Luca", "gender": "male", "imageSrc": "assets/luca-luca.png" },
             { "name": "Aparna", "movie": "Mayaanadhi", "gender": "female", "imageSrc": "assets/aparna-mayaanadhi.png" },
@@ -185,6 +209,10 @@ const archetypes = {
         title: "The Best-Friend Lover",
         icon: "🤝",
         desc: "Friendship-first romance, comfort and companionship",
+        hook: "You are the kind of person who needs to laugh with someone before you love them.",
+        mirror: "You tend to value shared history, feel most comfortable with a partner who is a peer, and dread awkward silences.",
+        truth: "Sometimes, you stay in 'comfort zones' because the risk of losing a friend is scarier than never trying.",
+        intro: "That’s why your love style aligns with...",
         characters: [
             { "name": "Aby", "movie": "Niram", "gender": "male", "imageSrc": "assets/aby-niram.png" },
             { "name": "Sidharthan", "movie": "Oru Indian Pranayakatha", "gender": "male", "imageSrc": "assets/sidharthan-oru-indian-pranayakatha.png" },
@@ -196,6 +224,10 @@ const archetypes = {
         title: "The Realist Romantic",
         icon: "🧠",
         desc: "Grounded, practical, emotionally mature",
+        hook: "You are the kind of person who believes love is a verb, not just a feeling.",
+        mirror: "You tend to look for stability, show love through acts of service, and keep your feet firmly planted on the ground.",
+        truth: "Sometimes, you focus so much on the practicalities that you forget to let yourself be swept away.",
+        intro: "That’s why your love style aligns with...",
         characters: [
             { "name": "Dennis", "movie": "Summer in Bethlehem", "gender": "male", "imageSrc": "assets/dennis-summer-in-bethlehem.png" },
             { "name": "Das", "movie": "Sandesham", "gender": "male", "imageSrc": "assets/das-sandesham.png" },
@@ -206,6 +238,10 @@ const archetypes = {
         title: "The Mysterious Soul",
         icon: "🌚",
         desc: "Emotionally complex, guarded, layered personality",
+        hook: "You are the kind of person who feels like an unsolved puzzle.",
+        mirror: "You tend to keep your deepest thoughts hidden, attract people who want to 'figure you out', and value privacy intensely.",
+        truth: "Sometimes, you build walls so high that even the people who want to love you can't climb them.",
+        intro: "That’s why your love style aligns with...",
         characters: [
             { "name": "Charlie", "movie": "Charlie", "gender": "male", "imageSrc": "assets/charlie-charlie.png" },
             { "name": "Nagavalli", "movie": "Manichitrathaazhu", "gender": "female", "imageSrc": "assets/nagavalli-manichitrathaazhu.png" },
@@ -216,6 +252,10 @@ const archetypes = {
         title: "The Adventurous Lover",
         icon: "🌍",
         desc: "Free-spirited, spontaneous, romantic through experiences",
+        hook: "You are the kind of person who falls in love with experiences as much as people.",
+        mirror: "You tend to seek excitement, get bored with routine, and see love as the ultimate great adventure.",
+        truth: "Sometimes, you keep moving because staying still forces you to face things you can't run from.",
+        intro: "That’s why your love style aligns with...",
         characters: [
             { "name": "Ashokan", "movie": "Yodha", "gender": "male", "imageSrc": "assets/chandralekha-yodha.png" },
             { "name": "Tessa", "movie": "Charlie", "gender": "female", "imageSrc": "assets/tessa-charlie.png" }
@@ -247,9 +287,14 @@ const resultIcon = document.getElementById("resultIcon");
 const resultImage = document.getElementById("resultImage");
 const resultDescription = document.getElementById("resultDescription");
 const restartBtn = document.getElementById("restartBtn");
-// const shareBtn = document.getElementById("shareBtn"); // Removed
 const topShareBtn = document.getElementById("topShareBtn");
 const nextBtn = document.getElementById("nextBtn");
+
+// New Story Elements
+const analyzingLoader = document.getElementById("analyzingLoader");
+const storyContainer = document.getElementById("storyContainer");
+const storyText = document.getElementById("storyText");
+const finalResult = document.getElementById("finalResult");
 
 function loadQuestion() {
     const currentQuestion = quizData[currentQuestionIndex];
@@ -363,12 +408,10 @@ function updateProgress() {
     questionCounter.textContent = `Question ${currentQuestionIndex + 1} of ${quizData.length}`;
 }
 
-function showResult() {
-    // Find highest score
+async function showResult() {
+    // 1. Determine Archetype
     let maxScore = 0;
-    let resultType = "hopeless_romantic"; // Default fallback
-
-    // Get all types with the max score to handle ties randomly or deterministically
+    let resultType = "hopeless_romantic";
     let candidates = [];
 
     for (const [type, score] of Object.entries(scores)) {
@@ -380,8 +423,6 @@ function showResult() {
         }
     }
 
-    // If there's a tie, you could pick random, or just the first one. 
-    // Let's pick random for fun if there's a tie
     if (candidates.length > 0) {
         resultType = candidates[Math.floor(Math.random() * candidates.length)];
     }
@@ -390,15 +431,12 @@ function showResult() {
 
     // Filter characters by gender
     let filteredCharacters = result.characters.filter(c => c.gender === userGender);
-
-    // Fallback if no specific gender match
     if (filteredCharacters.length === 0) {
         filteredCharacters = result.characters;
     }
-
-    // Pick a random character
     const character = filteredCharacters[Math.floor(Math.random() * filteredCharacters.length)];
 
+    // 2. Prepare Final Result Content (Hidden)
     // Show Image if available
     if (character.imageSrc) {
         resultImage.src = character.imageSrc;
@@ -410,16 +448,63 @@ function showResult() {
         resultImage.classList.add("hidden");
     }
 
-    resultDescription.textContent = `${result.title}:\n\n${result.desc}`;
+    const resultHTML = `
+        <strong>${result.title}</strong>
+        ${result.desc}
+    `;
+    resultDescription.innerHTML = resultHTML;
 
+    // 3. Start Animation Sequence
     resultModal.classList.remove("hidden");
-    progressFill.style.width = "100%";
+
+    // Reset Views
+    analyzingLoader.classList.remove("hidden");
+    storyContainer.classList.add("hidden");
+    finalResult.classList.add("hidden");
+    topShareBtn.classList.add("hidden"); // Hide share until end
+
+    // Step A: Analyzing (2000ms)
+    await delay(2000);
+    analyzingLoader.classList.add("hidden");
+
+    // Step B: Storytelling
+    storyContainer.classList.remove("hidden");
+
+    const storySequence = [
+        result.hook,
+        `${result.intro} <br><strong>${character.name}</strong> <span style="font-size: 0.9em; opacity: 0.8">(${character.movie})</span>`
+    ];
+
+    for (const text of storySequence) {
+        storyText.innerHTML = text;
+        storyText.classList.remove("visible");
+
+        // Fade In
+        await delay(100);
+        storyText.classList.add("visible");
+
+        // Read Time (adjust based on length, min 2s)
+        await delay(3000);
+
+        // Fade Out
+        storyText.classList.remove("visible");
+        await delay(500);
+    }
+
+    // Step C: Final Reveal
+    storyContainer.classList.add("hidden");
+    finalResult.classList.remove("hidden");
+    topShareBtn.classList.remove("hidden");
 
     // Track Quiz Completion
     trackEvent('quiz_complete', {
         result_archetype: resultType,
         result_title: result.title
     });
+}
+
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 function restartQuiz() {

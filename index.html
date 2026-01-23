@@ -61,51 +61,65 @@
     <!-- Result Modal -->
     <div id="resultModal" class="modal hidden">
         <div class="modal-content">
-            <div class="modal-header">
-                <button class="top-icon-btn" id="topShareBtn" aria-label="Share Result">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
-                        <polyline points="16 6 12 2 8 6"></polyline>
-                        <line x1="12" y1="2" x2="12" y2="15"></line>
-                    </svg>
-                </button>
-                <h3>Your Romantic Archetype Is...</h3>
-            </div>
-            <div class="modal-body">
-                <div class="result-content">
-                    <div class="emoji-container" id="emojiContainer">
-                        <div class="result-icon" id="resultIcon"></div>
-                    </div>
-                    <img id="resultImage" class="result-img hidden" alt="Character Image">
-                    <h2 class="result-title" id="resultTitle"></h2>
-                </div>
-                <p id="resultDescription" class="result-description">
-                    You are deep, emotional, and value connection above all else.
-                </p>
+            <button class="top-icon-btn" id="topShareBtn" aria-label="Share Result">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                    <polyline points="16 6 12 2 8 6"></polyline>
+                    <line x1="12" y1="2" x2="12" y2="15"></line>
+                </svg>
+            </button>
 
-                <div class="app-nudge">
-                    <p>Find someone who matches your vibe. </p>
-                    <p>Download Arike</p>
-                    <div class="store-buttons">
-                        <a href="https://play.google.com/store/apps/details?id=com.arike.app&hl=en_IN&pli=1"
-                            target="_blank" class="store-btn google-play">
-                            <img src="assets/google-play-badge.png" alt="Get it on Google Play">
-                        </a>
-                        <a href="https://apps.apple.com/in/app/arike-where-malayalis-date/id1553017906" target="_blank"
-                            class="store-btn app-store">
-                            <img src="assets/app-store-badge.png" alt="Download on the App Store">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="modal-actions">
-                    <!-- Share button moved to top right -->
-                    <button id="restartBtn" class="primary-btn">Retake Quiz</button>
-                </div>
+            <!-- 1. Analyzing Phase -->
+            <div id="analyzingLoader" class="analyzing-loader hidden">
+                <div class="spinner"></div>
+                <p>Analyzing your heart...</p>
             </div>
-        </div>
-    </div>
+
+            <!-- 2. Story Phase -->
+            <div id="storyContainer" class="story-container hidden">
+                <p id="storyText" class="story-text"></p>
+            </div>
+
+            <!-- 3. Final Result -->
+            <div id="finalResult" class="final-result hidden">
+                <div class="modal-header">
+                    <h3>Your Romantic Archetype Is...</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="result-content">
+                        <div class="emoji-container" id="emojiContainer">
+                            <div class="result-icon" id="resultIcon"></div>
+                        </div>
+                        <img id="resultImage" class="result-img hidden" alt="Character Image">
+
+                        <!-- Result Title/Description injected here dynamically -->
+                        <div id="resultDescription" class="result-description"></div>
+                    </div>
+
+                    <div class="app-nudge">
+                        <p>Find someone who matches your vibe. </p>
+                        <p>Download Arike</p>
+                        <div class="store-buttons">
+                            <a href="https://play.google.com/store/apps/details?id=com.arike.app&hl=en_IN&pli=1"
+                                target="_blank" class="store-btn google-play">
+                                <img src="assets/google-play-badge.png" alt="Get it on Google Play">
+                            </a>
+                            <a href="https://apps.apple.com/in/app/arike-where-malayalis-date/id1553017906"
+                                target="_blank" class="store-btn app-store">
+                                <img src="assets/app-store-badge.png" alt="Download on the App Store">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="modal-actions">
+                        <!-- Share button moved to top right -->
+                        <button id="restartBtn" class="primary-btn">Retake Quiz</button>
+                    </div>
+                </div> <!-- Close modal-body -->
+            </div> <!-- Close finalResult -->
+        </div> <!-- Close modal-content -->
+    </div> <!-- Close resultModal -->
 
     <script src="script.js"></script>
 </body>

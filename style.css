@@ -14,6 +14,11 @@
     --anim-speed: 0.3s;
 }
 
+/* Utility Class - Critical for visibility toggling */
+.hidden {
+    display: none !important;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -275,6 +280,62 @@ h1 {
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
     border-top: 5px solid var(--primary-color);
     animation: slideUp 0.4s ease-out;
+}
+
+/* Analyzing Loader */
+.analyzing-loader {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Story Container */
+.story-container {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.story-text {
+    font-size: 1.4rem;
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    line-height: 1.6;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.story-text.visible {
+    opacity: 1;
+}
+
+.modal-header h3 {
+    color: #ae2b26;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5rem;
 }
 
 @keyframes slideUp {
