@@ -131,7 +131,12 @@ const archetypes = {
             { "name": "George", "movie": "Premam", "gender": "male", "imageSrc": "assets/george-premam.png" },
             { "name": "Vinod", "movie": "Thattathin Marayathu", "gender": "male", "imageSrc": "assets/vinod-thattathin-marayathu.png" },
             { "name": "Pooja", "movie": "Ohm Shanthi Oshaana", "gender": "female", "imageSrc": "assets/pooja-ohm-shanthi-oshaana.png" },
-            { "name": "Nadira", "movie": "Anarkali", "gender": "female", "imageSrc": "assets/nadira-anarkali.png" }
+            { "name": "Nadira", "movie": "Anarkali", "gender": "female", "imageSrc": "assets/nadira-anarkali.png" },
+            { "name": "Moideen", "movie": "Ennu Ninte Moideen", "gender": "male", "imageSrc": "assets/moideen-ennu-ninte-moideen.png" },
+            { "name": "Balamani", "movie": "Nandanam", "gender": "female", "imageSrc": "assets/balamani-nandanam.png" },
+            { "name": "Rasool", "movie": "Annayum Rasoolum", "gender": "male", "imageSrc": "assets/rasool-annayum-rasoolum.png" },
+            { "name": "Mini", "movie": "Aniyathipravu", "gender": "female", "imageSrc": "assets/mini-aniyathipravu.png" },
+            { "name": "Sachin", "movie": "Premalu", "gender": "male", "imageSrc": "assets/sachin-premalu.png" }
         ]
     },
     "charming_flirt": {
@@ -146,7 +151,12 @@ const archetypes = {
             { "name": "Sunny", "movie": "Neelakasham Pachakadal Chuvanna Bhoomi", "gender": "male", "imageSrc": "assets/sunny-neelakasham-pachakadal-chuvanna-bhoomi.png" },
             { "name": "Unnikrishnan", "movie": "Vandanam", "gender": "male", "imageSrc": "assets/unnikrishnan-vandanam.png" },
             { "name": "Darshana", "movie": "Hridayam", "gender": "female", "imageSrc": "assets/darshana-hridayam.png" },
-            { "name": "Parakkum Latha", "movie": "Chotta Mumbai", "gender": "female", "imageSrc": "assets/parakkum-latha-chotta-mumbai.png" }
+            { "name": "Parakkum Latha", "movie": "Chotta Mumbai", "gender": "female", "imageSrc": "assets/parakkum-latha-chotta-mumbai.png" },
+            { "name": "Joji", "movie": "Kilukkam", "gender": "male", "imageSrc": "assets/joji-kilukkam.png" },
+            { "name": "Faizi", "movie": "Ustad Hotel", "gender": "male", "imageSrc": "assets/faizi-ustad-hotel.png" },
+            { "name": "Lucky", "movie": "Casanovva", "gender": "male", "imageSrc": "assets/lucky-casanovva.png" },
+            { "name": "Amal Davis", "movie": "Premalu", "gender": "male", "imageSrc": "assets/amal-davis-premalu.png" },
+            { "name": "Sona", "movie": "Super Sharanya", "gender": "female", "imageSrc": "assets/sona-super-sharanya.png" }
         ]
     },
     "slow_burn": {
@@ -159,7 +169,11 @@ const archetypes = {
         intro: "That’s why your love style aligns with...",
         characters: [
             { "name": "Mathan", "movie": "Mayaanadhi", "gender": "male", "imageSrc": "assets/mathan-mayaanadhi.png" },
-            { "name": "Maya", "movie": "Salt N' Pepper", "gender": "female", "imageSrc": "assets/maya-salt-n-pepper.png" }
+            { "name": "Maya", "movie": "Salt N' Pepper", "gender": "female", "imageSrc": "assets/maya-salt-n-pepper.png" },
+            { "name": "Divya", "movie": "Bangalore Days", "gender": "female", "imageSrc": "assets/divya-bangalore-days.png" },
+            { "name": "Thulasi", "movie": "Classmates", "gender": "female", "imageSrc": "assets/thulasi-classmates.png" },
+            { "name": "Raghu", "movie": "Anuraga Karikkin Vellam", "gender": "male", "imageSrc": "assets/raghu-anuraga-karikkin-vellam.png" },
+            { "name": "Giri", "movie": "Ohm Shanthi Oshaana", "gender": "male", "imageSrc": "assets/giri-ohm-shanthi-oshaana.png" }
         ]
     },
     "independent_heart": {
@@ -173,7 +187,10 @@ const archetypes = {
         characters: [
             { "name": "Arjun", "movie": "Bangalore Days", "gender": "male", "imageSrc": "assets/arjun-bangalore-days.png" },
             { "name": "Sara", "movie": "Sara’s", "gender": "female", "imageSrc": "assets/sara-saras.png" },
-            { "name": "Pallavi", "movie": "Uyare", "gender": "female", "imageSrc": "assets/pallavi-uyare.png" }
+            { "name": "Pallavi", "movie": "Uyare", "gender": "female", "imageSrc": "assets/pallavi-uyare.png" },
+            { "name": "Reenu", "movie": "Premalu", "gender": "female", "imageSrc": "assets/reenu-premalu.png" },
+            { "name": "Ambili", "movie": "Ambili", "gender": "male", "imageSrc": "assets/ambili-ambili.png" },
+            { "name": "Prakashan", "movie": "Njan Prakashan", "gender": "male", "imageSrc": "assets/prakashan-njan-prakashan.png" }
         ]
     },
     "protective_partner": {
@@ -188,7 +205,8 @@ const archetypes = {
             { "name": "Shammi", "movie": "Kumbalangi Nights", "gender": "male", "imageSrc": "assets/shammi-kumbalangi-nights.png" },
             { "name": "Georgekutty", "movie": "Drishyam", "gender": "male", "imageSrc": "assets/georgekutty-drishyam.png" },
             { "name": "Kalyani", "movie": "Varane Avashyamund", "gender": "female", "imageSrc": "assets/kalyani-varane-avashyamund.png" },
-            { "name": "Pournami", "movie": "Vijay Superum Pournamiyum", "gender": "female", "imageSrc": "assets/pournami-vijay-superum-pournamiyum.png" }
+            { "name": "Pournami", "movie": "Vijay Superum Pournamiyum", "gender": "female", "imageSrc": "assets/pournami-vijay-superum-pournamiyum.png" },
+            { "name": "Shivadas", "movie": "Bangalore Days", "gender": "male", "imageSrc": "assets/shivadas-bangalore-days.png" }
         ]
     },
     "passionate_lover": {
@@ -231,7 +249,9 @@ const archetypes = {
         characters: [
             { "name": "Dennis", "movie": "Summer in Bethlehem", "gender": "male", "imageSrc": "assets/dennis-summer-in-bethlehem.png" },
             { "name": "Das", "movie": "Sandesham", "gender": "male", "imageSrc": "assets/das-sandesham.png" },
-            { "name": "Anjali", "movie": "Kali", "gender": "female", "imageSrc": "assets/anjali-kali.png" }
+            { "name": "Anjali", "movie": "Kali", "gender": "female", "imageSrc": "assets/anjali-kali.png" },
+            { "name": "Sarah", "movie": "Bangalore Days", "gender": "female", "imageSrc": "assets/sarah-bangalore-days.png" },
+            { "name": "Biju Paulose", "movie": "Action Hero Biju", "gender": "male", "imageSrc": "assets/biju-paulose-action-hero-biju.png" }
         ]
     },
     "mysterious_soul": {
@@ -245,7 +265,9 @@ const archetypes = {
         characters: [
             { "name": "Charlie", "movie": "Charlie", "gender": "male", "imageSrc": "assets/charlie-charlie.png" },
             { "name": "Nagavalli", "movie": "Manichitrathaazhu", "gender": "female", "imageSrc": "assets/nagavalli-manichitrathaazhu.png" },
-            { "name": "Abhirami", "movie": "Summer in Bethlehem", "gender": "female", "imageSrc": "assets/abhirami-summer-in-bethlehem.png" }
+            { "name": "Abhirami", "movie": "Summer in Bethlehem", "gender": "female", "imageSrc": "assets/abhirami-summer-in-bethlehem.png" },
+            { "name": "Dr Sunny", "movie": "Manichitrathazhu", "gender": "male", "imageSrc": "assets/dr-sunny-manichitrathazhu.png" },
+            { "name": "Hari", "movie": "North 24 Kaatham", "gender": "male", "imageSrc": "assets/hari-north-24-kaatham.png" }
         ]
     },
     "adventurous_lover": {
@@ -258,7 +280,8 @@ const archetypes = {
         intro: "That’s why your love style aligns with...",
         characters: [
             { "name": "Ashokan", "movie": "Yodha", "gender": "male", "imageSrc": "assets/chandralekha-yodha.png" },
-            { "name": "Tessa", "movie": "Charlie", "gender": "female", "imageSrc": "assets/tessa-charlie.png" }
+            { "name": "Tessa", "movie": "Charlie", "gender": "female", "imageSrc": "assets/tessa-charlie.png" },
+            { "name": "Kasi", "movie": "Neelakasham Pachakadal Chuvanna Bhoomi", "gender": "male", "imageSrc": "assets/kasi-neelakasham-pachakadal-chuvanna-bhoomi.png" }
         ]
     }
 };
