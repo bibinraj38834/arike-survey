@@ -12,7 +12,9 @@ const quizData = [
             { text: "Instantly, like a movie scene", types: ["hopeless_romantic", "passionate_lover"] },
             { text: "Slowly, over time", types: ["slow_burn", "realist_romantic"] },
             { text: "Through friendship", types: ["best_friend_lover"] },
-            { text: "I don’t fall easily", types: ["independent_heart", "mysterious_soul"] }
+            { text: "I don’t fall easily", types: ["independent_heart", "mysterious_soul"] },
+            { text: "Accidentally, when I least expect it", types: ["adventurous_lover", "hopeless_romantic"] },
+            { text: "After analyzing compatibility", types: ["realist_romantic", "protective_partner"] }
         ]
     },
     {
@@ -21,7 +23,9 @@ const quizData = [
             { text: "Candlelight dinner and deep talks", types: ["hopeless_romantic"] },
             { text: "Road trip with no plan", types: ["adventurous_lover"] },
             { text: "Casual coffee and laughs", types: ["best_friend_lover"] },
-            { text: "Something intense and unforgettable", types: ["passionate_lover", "charming_flirt"] }
+            { text: "Something intense and unforgettable", types: ["passionate_lover", "charming_flirt"] },
+            { text: "Quiet night at home", types: ["slow_burn", "protective_partner"] },
+            { text: "Trying a new activity together", types: ["independent_heart", "adventurous_lover"] }
         ]
     },
     {
@@ -30,7 +34,9 @@ const quizData = [
             { text: "Not being loved enough", types: ["hopeless_romantic"] },
             { text: "Losing freedom", types: ["independent_heart"] },
             { text: "Getting hurt", types: ["slow_burn", "protective_partner"] },
-            { text: "Boredom", types: ["adventurous_lover", "charming_flirt"] }
+            { text: "Boredom", types: ["adventurous_lover", "charming_flirt"] },
+            { text: "Being misunderstood", types: ["mysterious_soul", "best_friend_lover"] },
+            { text: "Financial instability", types: ["realist_romantic"] }
         ]
     },
     {
@@ -39,7 +45,9 @@ const quizData = [
             { text: "Words and gestures", types: ["hopeless_romantic"] },
             { text: "Actions, not words", types: ["realist_romantic"] },
             { text: "Being there always", types: ["protective_partner"] },
-            { text: "Physical affection", types: ["passionate_lover"] }
+            { text: "Physical affection", types: ["passionate_lover"] },
+            { text: "Giving thoughtful gifts", types: ["charming_flirt", "slow_burn"] },
+            { text: "Through humor and teasing", types: ["best_friend_lover", "adventurous_lover"] }
         ]
     },
     {
@@ -48,7 +56,9 @@ const quizData = [
             { text: "Replay memories", types: ["hopeless_romantic", "mysterious_soul"] },
             { text: "Move on quickly", types: ["charming_flirt"] },
             { text: "Reflect and heal", types: ["slow_burn", "realist_romantic"] },
-            { text: "Distract yourself", types: ["adventurous_lover"] }
+            { text: "Distract yourself", types: ["adventurous_lover"] },
+            { text: "Focus on career/hobbies", types: ["independent_heart", "protective_partner"] },
+            { text: "Rely on friends", types: ["best_friend_lover"] }
         ]
     },
     {
@@ -57,7 +67,9 @@ const quizData = [
             { text: "Quality time", types: ["best_friend_lover"] },
             { text: "Physical touch", types: ["passionate_lover"] },
             { text: "Acts of service", types: ["protective_partner"] },
-            { text: "Words of affirmation", types: ["hopeless_romantic"] }
+            { text: "Words of affirmation", types: ["hopeless_romantic"] },
+            { text: "Receiving gifts", types: ["charming_flirt"] },
+            { text: "Shared intellectual pursuits", types: ["independent_heart", "realist_romantic"] }
         ]
     },
     {
@@ -66,7 +78,9 @@ const quizData = [
             { text: "Emotional depth", types: ["mysterious_soul"] },
             { text: "Stability", types: ["realist_romantic", "protective_partner"] },
             { text: "Fun & excitement", types: ["adventurous_lover"] },
-            { text: "Independence", types: ["independent_heart"] }
+            { text: "Independence", types: ["independent_heart"] },
+            { text: "Constant communication", types: ["hopeless_romantic", "best_friend_lover"] },
+            { text: "Passion and chemistry", types: ["passionate_lover", "charming_flirt"] }
         ]
     },
     {
@@ -75,7 +89,9 @@ const quizData = [
             { text: "Dreamy", types: ["hopeless_romantic"] },
             { text: "Reliable", types: ["protective_partner"] },
             { text: "Magnetic", types: ["charming_flirt"] },
-            { text: "Hard to read", types: ["mysterious_soul"] }
+            { text: "Hard to read", types: ["mysterious_soul"] },
+            { text: "Ambitious", types: ["independent_heart", "realist_romantic"] },
+            { text: "The life of the party", types: ["adventurous_lover", "best_friend_lover"] }
         ]
     },
     {
@@ -84,7 +100,9 @@ const quizData = [
             { text: "Emotional connection", types: ["slow_burn"] },
             { text: "Shared experiences", types: ["best_friend_lover"] },
             { text: "Chemistry", types: ["passionate_lover", "charming_flirt"] },
-            { text: "Trust", types: ["realist_romantic", "protective_partner"] }
+            { text: "Trust", types: ["realist_romantic", "protective_partner"] },
+            { text: "Intellectual stimulation", types: ["independent_heart", "mysterious_soul"] },
+            { text: "Grand romantic gestures", types: ["hopeless_romantic", "adventurous_lover"] }
         ]
     },
     {
@@ -93,7 +111,9 @@ const quizData = [
             { text: "Destiny", types: ["hopeless_romantic"] },
             { text: "A journey", types: ["slow_burn"] },
             { text: "A choice", types: ["realist_romantic"] },
-            { text: "An adventure", types: ["adventurous_lover"] }
+            { text: "An adventure", types: ["adventurous_lover"] },
+            { text: "A partnership", types: ["protective_partner", "independent_heart"] },
+            { text: "An intense feeling", types: ["passionate_lover", "mysterious_soul"] }
         ]
     }
 ];
@@ -207,6 +227,8 @@ let currentQuestionIndex = 0;
 let userGender = null;
 // Initialize scores dynamically
 let scores = {};
+let currentSelections = []; // Track current question selections
+
 function resetScores() {
     scores = {};
     for (const key in archetypes) {
@@ -227,48 +249,112 @@ const resultDescription = document.getElementById("resultDescription");
 const restartBtn = document.getElementById("restartBtn");
 // const shareBtn = document.getElementById("shareBtn"); // Removed
 const topShareBtn = document.getElementById("topShareBtn");
+const nextBtn = document.getElementById("nextBtn");
 
 function loadQuestion() {
     const currentQuestion = quizData[currentQuestionIndex];
     questionText.textContent = currentQuestion.question;
     optionsGrid.innerHTML = "";
 
+
+
+    currentSelections = []; // Reset selections for new question
+    updateNextButtonState(); // Ensure button is hidden/disabled initially
+
     currentQuestion.options.forEach(option => {
         const btn = document.createElement("button");
         btn.classList.add("option-btn");
         btn.textContent = option.text;
-        btn.addEventListener("click", () => handleAnswer(option));
+        btn.addEventListener("click", (e) => toggleOption(btn, option));
         optionsGrid.appendChild(btn);
     });
 
     updateProgress();
+
+    // Hide Next button initially
+    nextBtn.classList.add("hidden");
+    nextBtn.disabled = true;
 }
 
-function handleAnswer(option) {
-    // Capture gender if it's the first question
+function toggleOption(btn, option) {
+    // Special handling for first question (Gender) - Single Selection
     if (currentQuestionIndex === 0) {
-        userGender = option.text.toLowerCase();
-        // Track Quiz Start
-        trackEvent('quiz_start', { gender: userGender });
+        const isSelected = btn.classList.contains("selected");
+
+        // Clear all previous selections
+        const allButtons = optionsGrid.querySelectorAll('.option-btn');
+        allButtons.forEach(b => b.classList.remove('selected'));
+        currentSelections = [];
+
+        if (!isSelected) {
+            btn.classList.add("selected");
+            currentSelections.push(option);
+        }
+
+        updateNextButtonState();
+        return;
     }
 
-    // Increment score for each mapped archetype
-    option.types.forEach(type => {
-        if (scores.hasOwnProperty(type)) {
-            scores[type]++;
+    // Multi-selection logic for other questions
+    const isSelected = btn.classList.contains("selected");
+
+    if (isSelected) {
+        // Deselect
+        btn.classList.remove("selected");
+        currentSelections = currentSelections.filter(sel => sel.text !== option.text);
+    } else {
+        // Select (Max 3)
+        if (currentSelections.length >= 3) {
+            // Shake animation for feedback
+            btn.classList.add("shake");
+            setTimeout(() => btn.classList.remove("shake"), 500);
+            return;
         }
+        btn.classList.add("selected");
+        currentSelections.push(option);
+    }
+
+    updateNextButtonState();
+}
+
+function updateNextButtonState() {
+    if (currentSelections.length > 0) {
+        nextBtn.classList.remove("hidden");
+        nextBtn.disabled = false;
+    } else {
+        nextBtn.classList.add("hidden");
+        nextBtn.disabled = true;
+    }
+}
+
+function nextQuestion() {
+    if (currentSelections.length === 0) return;
+
+    // Process all selected answers
+    currentSelections.forEach(option => {
+        // Capture gender if it's the first question (use the first selection, or logic for multiple genders?? 
+        // For simplicity, if multiple genders are selected, we might just take the first one or last one. 
+        // userGender logic assumes single choice usually, but let's stick to first choice for gender if multiple allowed)
+        if (currentQuestionIndex === 0 && !userGender) {
+            userGender = option.text.toLowerCase();
+            trackEvent('quiz_start', { gender: userGender });
+        }
+
+        // Increment score
+        option.types.forEach(type => {
+            if (scores.hasOwnProperty(type)) {
+                scores[type]++;
+            }
+        });
     });
 
     currentQuestionIndex++;
 
-    // Add a small delay for better UX and to clear hover states
-    setTimeout(() => {
-        if (currentQuestionIndex < quizData.length) {
-            loadQuestion();
-        } else {
-            showResult();
-        }
-    }, 300);
+    if (currentQuestionIndex < quizData.length) {
+        loadQuestion();
+    } else {
+        showResult();
+    }
 }
 
 function updateProgress() {
@@ -343,6 +429,7 @@ function restartQuiz() {
 // Event Listeners
 // Event Listeners
 restartBtn.addEventListener("click", restartQuiz);
+nextBtn.addEventListener("click", nextQuestion);
 
 topShareBtn.addEventListener("click", async () => {
     const description = resultDescription.textContent;

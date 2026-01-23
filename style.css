@@ -160,6 +160,79 @@ h1 {
     transform: translateY(0);
 }
 
+/* Navigation Controls */
+.navigation-controls {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#nextBtn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    min-width: 120px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+#nextBtn.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+}
+
+#nextBtn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    color: #888;
+}
+
+/* Selected Option State */
+.option-btn.selected {
+    border-color: var(--primary-color);
+    background: #fff9db;
+    /* Light yellow background */
+    box-shadow: 0 0 0 2px var(--primary-color);
+    position: relative;
+}
+
+.option-btn.selected::after {
+    content: '✓';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 /* Footer */
 .quiz-footer {
     margin-top: 2rem;
