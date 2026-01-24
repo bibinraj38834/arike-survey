@@ -418,6 +418,11 @@ function nextQuestion() {
 
     currentQuestionIndex++;
 
+    // Smart Lazy Preload: Start downloading images after user completes the first question
+    if (currentQuestionIndex === 1) {
+        preloadImages();
+    }
+
     if (currentQuestionIndex < quizData.length) {
         loadQuestion();
     } else {
@@ -584,7 +589,6 @@ window.addEventListener("click", (event) => {
 
 // Initialize
 loadQuestion();
-preloadImages();
 
 // Analytics Helper
 function trackEvent(eventName, params = {}) {
@@ -604,6 +608,7 @@ document.querySelectorAll('.store-btn').forEach(btn => {
 });
 
 function preloadImages() {
+    console.log("Starting background image preload...");
     for (const key in archetypes) {
         if (archetypes.hasOwnProperty(key)) {
             const characters = archetypes[key].characters;
@@ -616,3 +621,5 @@ function preloadImages() {
         }
     }
 }
+
+
