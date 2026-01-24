@@ -172,6 +172,10 @@ h1 {
     justify-content: flex-end;
 }
 
+#prevBtn {
+    margin-right: auto;
+}
+
 #nextBtn {
     padding: 0.8rem 2rem;
     font-size: 1rem;
