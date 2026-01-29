@@ -429,6 +429,15 @@ function nextQuestion() {
     // Save selections for this question
     userAnswers[currentQuestionIndex] = currentSelections;
 
+    // Track Question Answer
+    const currentQuestion = quizData[currentQuestionIndex];
+    trackEvent('question_answered', {
+        question_id: currentQuestionIndex + 1,
+        question_text: currentQuestion.question,
+        selected_options: currentSelections.map(s => s.text).join(', '),
+        selected_archetypes: currentSelections.flatMap(s => s.types).join(', ')
+    });
+
 
     currentQuestionIndex++;
 
@@ -568,7 +577,10 @@ async function showResult() {
     // Track Quiz Completion
     trackEvent('quiz_complete', {
         result_archetype: resultType,
-        result_title: result.title
+        result_title: result.title,
+        character_name: character.name,
+        character_movie: character.movie,
+        character_gender: character.gender
     });
 }
 
